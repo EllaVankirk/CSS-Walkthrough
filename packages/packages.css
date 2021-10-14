@@ -21,6 +21,7 @@ main {
     padding: 32px;
 }
 
+/*The left hand side of the border was not affected by the hover. One way to fix this is to add !important after the border color. This should only be done in rare occasions. I think it's probably better to just to the redundant code we did below in #free:hover*/
 .package:hover,
 .package:active {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -43,11 +44,27 @@ main {
     background-color: white;
 }
 
+/* Clears the float and won't interfere with float stuffs. Don't do this, it's not elegant*/
+.clearfix {
+    clear: both
+}
+
 #plus {
     background-color: rgba(213, 255, 220, 0.95);
 }
 #free {
     background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-left: 4px solid #0e4f1f;
+    border-right: none;
+    text-align: right;
+}
+
+
+#free:hover,
+#free:active {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color: #ff5454;
 }
 
 #premium {
