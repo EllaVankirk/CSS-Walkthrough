@@ -17,6 +17,7 @@ main {
     border-left: none;
     margin: 16px 0px;
     padding: 16px 8px;
+    position: relative;
 }
 
 
@@ -26,6 +27,7 @@ main {
     color: inherit;
     display: block;
     padding: 32px;
+    position: relative;
 }
 
 /*The left hand side of the border was not affected by the hover. One way to fix this is to add !important after the border color. This should only be done in rare occasions. I think it's probably better to just to the redundant code we did below in #free:hover*/
@@ -37,6 +39,17 @@ main {
 
 .package__title {
     text-align: left;
+}
+
+.package__badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 20px;
+    font-size: 12px;
+    color: white;
+    background-color: #ff5454;
+    padding: 8px;
 }
 
 .package__subtitle {
